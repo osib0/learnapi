@@ -1,19 +1,19 @@
-"use client"
+"use client";
 
-import type React from "react"
+import type React from "react";
 
-import { useState } from "react"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { Label } from "@/components/ui/label"
-import { Badge } from "@/components/ui/badge"
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { Checkbox } from "@/components/ui/checkbox"
-import { Header } from "@/components/header"
-import { Footer } from "@/components/footer"
-import { useToast } from "@/hooks/use-toast"
+import { useState } from "react";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Label } from "@/components/ui/label";
+import { Badge } from "@/components/ui/badge";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { Checkbox } from "@/components/ui/checkbox";
+import { Header } from "@/components/header";
+import { Footer } from "@/components/footer";
+import { useToast } from "@/hooks/use-toast";
 import {
   Mail,
   Phone,
@@ -32,7 +32,7 @@ import {
   Zap,
   CheckCircle,
   ExternalLink,
-} from "lucide-react"
+} from "lucide-react";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -44,21 +44,21 @@ export default function ContactPage() {
     message: "",
     newsletter: false,
     priority: "normal",
-  })
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const { toast } = useToast()
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const { toast } = useToast();
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setIsSubmitting(true)
+    e.preventDefault();
+    setIsSubmitting(true);
 
     // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 2000))
+    await new Promise((resolve) => setTimeout(resolve, 2000));
 
     toast({
       title: "Message sent successfully!",
       description: "We'll get back to you within 24 hours.",
-    })
+    });
 
     setFormData({
       name: "",
@@ -69,13 +69,13 @@ export default function ContactPage() {
       message: "",
       newsletter: false,
       priority: "normal",
-    })
-    setIsSubmitting(false)
-  }
+    });
+    setIsSubmitting(false);
+  };
 
   const handleInputChange = (field: string, value: string | boolean) => {
-    setFormData((prev) => ({ ...prev, [field]: value }))
-  }
+    setFormData((prev) => ({ ...prev, [field]: value }));
+  };
 
   return (
     <div className="min-h-screen bg-background">
@@ -112,9 +112,7 @@ export default function ContactPage() {
             <Card>
               <CardHeader>
                 <CardTitle className="text-lg sm:text-xl">Send us a message</CardTitle>
-                <CardDescription className="text-xs sm:text-sm">
-                  Fill out the form below and we'll get back to you as soon as possible.
-                </CardDescription>
+                <CardDescription className="text-xs sm:text-sm">Fill out the form below and we'll get back to you as soon as possible.</CardDescription>
               </CardHeader>
               <CardContent>
                 <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
@@ -227,11 +225,7 @@ export default function ContactPage() {
                   </div>
 
                   <div className="flex items-center space-x-2">
-                    <Checkbox
-                      id="newsletter"
-                      checked={formData.newsletter}
-                      onCheckedChange={(checked) => handleInputChange("newsletter", checked as boolean)}
-                    />
+                    <Checkbox id="newsletter" checked={formData.newsletter} onCheckedChange={(checked) => handleInputChange("newsletter", checked as boolean)} />
                     <Label htmlFor="newsletter" className="text-xs sm:text-sm">
                       Subscribe to our newsletter for updates and API tips
                     </Label>
@@ -314,7 +308,7 @@ export default function ContactPage() {
               <CardContent>
                 <div className="flex flex-wrap gap-2 sm:gap-3">
                   <Button variant="outline" size="sm" asChild className="text-xs">
-                    <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+                    <a href="https://github.com/Osib06/learnapi" target="_blank" rel="noopener noreferrer">
                       <Github className="h-3 w-3 sm:h-4 sm:w-4 mr-1 sm:mr-2" />
                       GitHub
                       <ExternalLink className="h-2 w-2 sm:h-3 sm:w-3 ml-1" />
@@ -372,9 +366,7 @@ export default function ContactPage() {
 
         {/* FAQ Section */}
         <div className="mt-12 sm:mt-16">
-          <h2 className="text-xl xs:text-2xl sm:text-3xl font-bold text-center mb-6 sm:mb-8">
-            Frequently Asked Questions
-          </h2>
+          <h2 className="text-xl xs:text-2xl sm:text-3xl font-bold text-center mb-6 sm:mb-8">Frequently Asked Questions</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
             <Card>
               <CardHeader>
@@ -382,8 +374,7 @@ export default function ContactPage() {
               </CardHeader>
               <CardContent>
                 <p className="text-xs sm:text-sm text-muted-foreground">
-                  Simply visit our API Explorer, choose a category, and start testing endpoints immediately. No
-                  registration required for basic usage.
+                  Simply visit our API Explorer, choose a category, and start testing endpoints immediately. No registration required for basic usage.
                 </p>
               </CardContent>
             </Card>
@@ -394,8 +385,7 @@ export default function ContactPage() {
               </CardHeader>
               <CardContent>
                 <p className="text-xs sm:text-sm text-muted-foreground">
-                  Yes! LearAPI is completely free for learning and testing purposes. We provide access to multiple
-                  public APIs without any cost.
+                  Yes! LearAPI is completely free for learning and testing purposes. We provide access to multiple public APIs without any cost.
                 </p>
               </CardContent>
             </Card>
@@ -406,8 +396,7 @@ export default function ContactPage() {
               </CardHeader>
               <CardContent>
                 <p className="text-xs sm:text-sm text-muted-foreground">
-                  LearAPI is for educational purposes. For commercial use, please refer to the individual API providers'
-                  terms of service.
+                  LearAPI is for educational purposes. For commercial use, please refer to the individual API providers' terms of service.
                 </p>
               </CardContent>
             </Card>
@@ -418,8 +407,7 @@ export default function ContactPage() {
               </CardHeader>
               <CardContent>
                 <p className="text-xs sm:text-sm text-muted-foreground">
-                  Use the contact form above with the "Bug Report" or "Feature Request" category, or reach out to us
-                  directly via email.
+                  Use the contact form above with the "Bug Report" or "Feature Request" category, or reach out to us directly via email.
                 </p>
               </CardContent>
             </Card>
@@ -472,5 +460,5 @@ export default function ContactPage() {
 
       <Footer />
     </div>
-  )
+  );
 }

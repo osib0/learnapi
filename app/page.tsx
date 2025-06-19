@@ -9,6 +9,8 @@ import { ArrowRight, Code, Zap, Shield, Palette, Globe, Github, BookOpen, Play, 
 import { ThemeToggle } from "@/components/theme-toggle";
 import { motion } from "framer-motion";
 import { useToast } from "@/hooks/use-toast";
+import Ads from "@/components/ads";
+import ProfitablerateAd from "@/components/profielareaad";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 60 },
@@ -154,7 +156,7 @@ export default function HomePage() {
             Interactive API playground with real-time response, code snippets & more. Perfect for developers to discover, test, and learn about public APIs.
           </motion.p>
 
-          <motion.div variants={fadeInUp} className="flex flex-col xs:flex-row gap-3 sm:gap-4 justify-center items-center px-2 sm:px-4">
+          <motion.div variants={fadeInUp} className="flex flex-wrap flex-col xs:flex-row gap-3 sm:gap-4 justify-center items-center px-2 sm:px-4">
             <motion.div {...scaleOnHover} className="w-full xs:w-auto">
               <Button size="lg" asChild className="w-full xs:w-auto text-sm sm:text-base">
                 <Link href="/explore">
@@ -167,10 +169,21 @@ export default function HomePage() {
             </motion.div>
             <motion.div {...scaleOnHover} className="w-full xs:w-auto">
               <Button size="lg" variant="outline" asChild className="w-full xs:w-auto text-sm sm:text-base">
-                <Link href="https://github.com" target="_blank">
+                <Link href="https://github.com/Osib06/learnapi" target="_blank">
                   <Github className="mr-2 h-4 w-4" />
                   <span className="hidden xs:inline">View on GitHub</span>
                   <span className="xs:hidden">GitHub</span>
+                </Link>
+              </Button>
+            </motion.div>
+            <motion.div {...scaleOnHover} className="w-full xs:w-auto">
+              <Button
+                size="lg"
+                asChild
+                className="w-full xs:w-auto text-sm sm:text-base bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500 text-white hover:brightness-110 animate-pulse"
+              >
+                <Link href="https://www.profitableratecpm.com/qey4vvdf?key=bc8ee17099cd3518e1a61bdc897ec865" target="_blank">
+                  🔥 Boost Your Dev Toolkit
                 </Link>
               </Button>
             </motion.div>
@@ -197,6 +210,7 @@ export default function HomePage() {
           </motion.div>
         </motion.div>
       </section>
+      <Ads />
 
       {/* Live API Demo Section */}
       <section className="container mx-auto px-3 sm:px-4 py-8 sm:py-12 md:py-16 lg:py-24">
@@ -283,29 +297,30 @@ export default function HomePage() {
                 </CardHeader>
                 <CardContent>
                   {apiResponse ? (
-                    <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} className="space-y-3 sm:space-y-4">
+                    <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} className="space-y-4">
                       {/* User Info Display */}
                       {apiResponse.results && apiResponse.results[0] && (
-                        <div className="p-3 sm:p-4 bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg border">
-                          <div className="flex items-center gap-3 sm:gap-4 mb-2 sm:mb-3">
-                            <div className="w-8 h-8 sm:w-12 sm:h-12 bg-primary/10 rounded-full flex items-center justify-center">
-                              <Users className="h-4 w-4 sm:h-6 sm:w-6 text-primary" />
+                        <div className="p-4 bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg border shadow-sm">
+                          <div className="flex items-center gap-4 mb-4">
+                            <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+                              <Users className="h-6 w-6 text-primary" />
                             </div>
-                            <div className="min-w-0 flex-1">
-                              <h4 className="font-semibold text-sm sm:text-base truncate">
+                            <div className="flex-1 min-w-0">
+                              <h4 className="font-semibold text-base truncate">
                                 {apiResponse.results[0].name.first} {apiResponse.results[0].name.last}
                               </h4>
-                              <p className="text-xs sm:text-sm text-muted-foreground truncate">{apiResponse.results[0].email}</p>
+                              <p className="text-sm text-muted-foreground truncate">{apiResponse.results[0].email}</p>
                             </div>
                           </div>
-                          <div className="grid grid-cols-1 xs:grid-cols-2 gap-2 text-xs sm:text-sm">
-                            <div className="min-w-0">
+
+                          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
+                            <div>
                               <span className="font-medium">Location:</span>
                               <p className="text-muted-foreground truncate">
                                 {apiResponse.results[0].location.city}, {apiResponse.results[0].location.country}
                               </p>
                             </div>
-                            <div className="min-w-0">
+                            <div>
                               <span className="font-medium">Phone:</span>
                               <p className="text-muted-foreground truncate">{apiResponse.results[0].phone}</p>
                             </div>
@@ -314,14 +329,14 @@ export default function HomePage() {
                       )}
 
                       {/* Raw JSON Response */}
-                      <div className="relative">
-                        <pre className="p-2 sm:p-4 bg-muted rounded-lg overflow-x-auto text-xs max-h-48 sm:max-h-64 overflow-y-auto">
+                      <div className="relative max-h-60 sm:max-h-80 overflow-auto">
+                        <pre className="p-4 bg-muted rounded-lg text-xs leading-relaxed whitespace-pre-wrap break-words">
                           <code>{JSON.stringify(apiResponse, null, 2)}</code>
                         </pre>
                       </div>
                     </motion.div>
                   ) : (
-                    <div className="flex flex-col items-center justify-center py-8 sm:py-12 text-center">
+                    <div className="flex flex-col items-center justify-center py-8 text-center">
                       <motion.div
                         animate={{
                           scale: [1, 1.1, 1],
@@ -329,13 +344,13 @@ export default function HomePage() {
                         }}
                         transition={{
                           duration: 2,
-                          repeat: Number.POSITIVE_INFINITY,
+                          repeat: Infinity,
                           ease: "easeInOut",
                         }}
                       >
-                        <Code className="h-8 w-8 sm:h-12 sm:w-12 text-muted-foreground/50 mb-3 sm:mb-4" />
+                        <Code className="h-10 w-10 text-muted-foreground/50 mb-4" />
                       </motion.div>
-                      <p className="text-muted-foreground text-xs sm:text-sm">Click "Run API Call" to see the response here</p>
+                      <p className="text-muted-foreground text-sm">Click "Run API Call" to see the response here</p>
                     </div>
                   )}
                 </CardContent>
@@ -344,7 +359,7 @@ export default function HomePage() {
           </motion.div>
         </motion.div>
       </section>
-
+      <ProfitablerateAd />
       {/* Features Section */}
       <section className="container mx-auto px-3 sm:px-4 py-8 sm:py-12 md:py-16 lg:py-24">
         <motion.div className="mx-auto max-w-6xl" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 0.8 }} viewport={{ once: true }}>
@@ -522,7 +537,7 @@ export default function HomePage() {
               <h3 className="mb-2 sm:mb-3 text-xs sm:text-sm font-semibold">Connect</h3>
               <ul className="space-y-1 sm:space-y-2 text-xs sm:text-sm text-muted-foreground">
                 <li>
-                  <Link href="#" className="hover:text-foreground transition-colors">
+                  <Link href="https://github.com/Osib06/learnapi" className="hover:text-foreground transition-colors">
                     GitHub
                   </Link>
                 </li>

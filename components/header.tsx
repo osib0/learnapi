@@ -1,14 +1,14 @@
-"use client"
+"use client";
 
-import { Button } from "@/components/ui/button"
-import { ModeToggle } from "@/components/mode-toggle"
-import { Github, Menu, Code } from "lucide-react"
-import Link from "next/link"
-import { useState } from "react"
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
+import { Button } from "@/components/ui/button";
+import { ModeToggle } from "@/components/mode-toggle";
+import { Github, Menu, Code } from "lucide-react";
+import Link from "next/link";
+import { useState } from "react";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
 export function Header() {
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -35,7 +35,7 @@ export function Header() {
 
         <div className="flex items-center space-x-2">
           <Button variant="ghost" size="icon" asChild className="hidden md:flex">
-            <Link href="https://github.com" target="_blank" rel="noopener noreferrer">
+            <Link href="https://github.com/Osib06/learnapi" target="_blank" rel="noopener noreferrer">
               <Github className="h-4 w-4 sm:h-5 sm:w-5" />
               <span className="sr-only">GitHub</span>
             </Link>
@@ -52,30 +52,18 @@ export function Header() {
             </SheetTrigger>
             <SheetContent side="right" className="w-[280px] sm:w-[300px]">
               <nav className="flex flex-col space-y-4 mt-8">
-                <Link
-                  href="/explore"
-                  className="text-sm font-medium hover:text-primary transition-colors py-2"
-                  onClick={() => setIsOpen(false)}
-                >
+                <Link href="/explore" className="text-sm font-medium hover:text-primary transition-colors py-2" onClick={() => setIsOpen(false)}>
                   Explore APIs
                 </Link>
-                <Link
-                  href="/docs"
-                  className="text-sm font-medium hover:text-primary transition-colors py-2"
-                  onClick={() => setIsOpen(false)}
-                >
+                <Link href="/docs" className="text-sm font-medium hover:text-primary transition-colors py-2" onClick={() => setIsOpen(false)}>
                   Documentation
                 </Link>
-                <Link
-                  href="/contact"
-                  className="text-sm font-medium hover:text-primary transition-colors py-2"
-                  onClick={() => setIsOpen(false)}
-                >
+                <Link href="/contact" className="text-sm font-medium hover:text-primary transition-colors py-2" onClick={() => setIsOpen(false)}>
                   Contact
                 </Link>
                 <div className="border-t pt-4">
                   <Button variant="ghost" size="sm" asChild className="justify-start w-full">
-                    <Link href="https://github.com" target="_blank" rel="noopener noreferrer">
+                    <Link href="https://github.com/Osib06/learnapi" target="_blank" rel="noopener noreferrer">
                       <Github className="h-4 w-4 mr-2" />
                       GitHub
                     </Link>
@@ -87,5 +75,5 @@ export function Header() {
         </div>
       </div>
     </header>
-  )
+  );
 }
