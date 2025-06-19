@@ -14,25 +14,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { useToast } from "@/hooks/use-toast";
-import {
-  Mail,
-  Phone,
-  MapPin,
-  Clock,
-  Send,
-  MessageSquare,
-  Github,
-  Twitter,
-  Linkedin,
-  HelpCircle,
-  Bug,
-  Lightbulb,
-  Users,
-  Shield,
-  Zap,
-  CheckCircle,
-  ExternalLink,
-} from "lucide-react";
+import { Mail, Phone, MapPin, Clock, Send, MessageSquare, Github, Linkedin, HelpCircle, Bug, Lightbulb, Users, Shield, Zap, CheckCircle, ExternalLink } from "lucide-react";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -311,13 +293,6 @@ export default function ContactPage() {
                     <a href="https://github.com/Osib06/learnapi" target="_blank" rel="noopener noreferrer">
                       <Github className="h-3 w-3 sm:h-4 sm:w-4 mr-1 sm:mr-2" />
                       GitHub
-                      <ExternalLink className="h-2 w-2 sm:h-3 sm:w-3 ml-1" />
-                    </a>
-                  </Button>
-                  <Button variant="outline" size="sm" asChild className="text-xs">
-                    <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-                      <Twitter className="h-3 w-3 sm:h-4 sm:w-4 mr-1 sm:mr-2" />
-                      Twitter
                       <ExternalLink className="h-2 w-2 sm:h-3 sm:w-3 ml-1" />
                     </a>
                   </Button>

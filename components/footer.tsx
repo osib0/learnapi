@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Github, Twitter, Code } from "lucide-react";
+import { Github, Code } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export function Footer() {
@@ -56,12 +56,6 @@ export function Footer() {
                 <Link href="https://github.com/Osib06/learnapi" target="_blank" rel="noopener noreferrer">
                   <Github className="h-3 w-3 sm:h-4 sm:w-4 mr-1 sm:mr-2" />
                   <span className="text-xs sm:text-sm">GitHub</span>
-                </Link>
-              </Button>
-              <Button variant="ghost" size="sm" asChild>
-                <Link href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-                  <Twitter className="h-3 w-3 sm:h-4 sm:w-4 mr-1 sm:mr-2" />
-                  <span className="text-xs sm:text-sm">Twitter</span>
                 </Link>
               </Button>
             </div>

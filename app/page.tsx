@@ -537,11 +537,6 @@ export default function HomePage() {
                     GitHub
                   </Link>
                 </li>
-                <li>
-                  <Link href="#" className="hover:text-foreground transition-colors">
-                    Twitter
-                  </Link>
-                </li>
               </ul>
             </div>
           </div>
