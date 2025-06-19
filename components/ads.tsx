@@ -2,20 +2,20 @@
 import { useEffect, useId } from "react";
 
 const Ads = () => {
-  const uniqueId = useId(); // built-in React hook (React 18+)
+  const uniqueId = useId();
 
   useEffect(() => {
     const script1 = document.createElement("script");
+    script1.type = "text/javascript";
     script1.innerHTML = `
-      atOptions = {
-        'key' : '4837633e858b9eb86b61c6923a639116',
-        'format' : 'iframe',
-        'height' : 60,
-        'width' : 468,
-        'params' : {}
+      window.atOptions = {
+        key: '4837633e858b9eb86b61c6923a639116',
+        format: 'iframe',
+        height: 60,
+        width: Math.min(window.innerWidth - 20, 468), // responsive width max 468, minus some margin
+        params: {}
       };
     `;
-    script1.type = "text/javascript";
 
     const script2 = document.createElement("script");
     script2.src = "//www.highperformanceformat.com/4837633e858b9eb86b61c6923a639116/invoke.js";

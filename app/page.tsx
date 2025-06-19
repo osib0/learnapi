@@ -138,7 +138,6 @@ export default function HomePage() {
           </div>
         </div>
       </motion.header>
-
       {/* Hero Section */}
       <section className="container mx-auto px-3 sm:px-4 py-8 sm:py-12 md:py-16 lg:py-24">
         <motion.div className="mx-auto max-w-4xl text-center" variants={staggerContainer} initial="initial" animate="animate">
@@ -211,7 +210,6 @@ export default function HomePage() {
         </motion.div>
       </section>
       <Ads />
-
       {/* Live API Demo Section */}
       <section className="container mx-auto px-3 sm:px-4 py-8 sm:py-12 md:py-16 lg:py-24">
         <motion.div className="mx-auto max-w-6xl" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 0.8 }} viewport={{ once: true }}>
@@ -428,7 +426,6 @@ export default function HomePage() {
           </motion.div>
         </motion.div>
       </section>
-
       {/* CTA Section */}
       <section className="container mx-auto px-3 sm:px-4 py-8 sm:py-12 md:py-16 lg:py-24">
         <motion.div
@@ -449,7 +446,7 @@ export default function HomePage() {
               </CardDescription>
             </CardHeader>
             <CardContent className="text-center">
-              <div className="flex flex-col xs:flex-row gap-3 sm:gap-4 justify-center items-center">
+              <div className="flex flex-col xs:flex-row gap-3 sm:gap-4 justify-center items-center flex-wrap">
                 <motion.div {...scaleOnHover} className="w-full xs:w-auto">
                   <Button size="lg" asChild className="w-full xs:w-auto text-sm sm:text-base">
                     <Link href="/explore">
@@ -489,7 +486,6 @@ export default function HomePage() {
           </Card>
         </motion.div>
       </section>
-
       {/* Footer */}
       <motion.footer className="border-t bg-background" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 0.8 }} viewport={{ once: true }}>
         <div className="container mx-auto px-3 sm:px-4 py-6 sm:py-8 md:py-12">
