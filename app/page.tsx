@@ -11,6 +11,7 @@ import { motion } from "framer-motion";
 import { useToast } from "@/hooks/use-toast";
 import Ads from "@/components/ads";
 import ProfitablerateAd from "@/components/profielareaad";
+import BannerAd from "@/components/bannerad";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 60 },
@@ -209,7 +210,8 @@ export default function HomePage() {
           </motion.div>
         </motion.div>
       </section>
-      <Ads />
+      <BannerAd />
+
       {/* Live API Demo Section */}
       <section className="container mx-auto px-3 sm:px-4 py-8 sm:py-12 md:py-16 lg:py-24">
         <motion.div className="mx-auto max-w-6xl" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 0.8 }} viewport={{ once: true }}>
@@ -357,6 +359,7 @@ export default function HomePage() {
           </motion.div>
         </motion.div>
       </section>
+
       <ProfitablerateAd />
       {/* Features Section */}
       <section className="container mx-auto px-3 sm:px-4 py-8 sm:py-12 md:py-16 lg:py-24">

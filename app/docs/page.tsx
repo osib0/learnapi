@@ -1,19 +1,19 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { CodeBlock } from "@/components/code-block"
-import { Header } from "@/components/header"
-import { Footer } from "@/components/footer"
-import { Book, Code, Zap, Shield, ArrowRight, CheckCircle, AlertTriangle, Info } from "lucide-react"
-import Link from "next/link"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { CodeBlock } from "@/components/code-block";
+import { Header } from "@/components/header";
+import { Footer } from "@/components/footer";
+import { Book, Code, Zap, Shield, ArrowRight, CheckCircle, AlertTriangle, Info } from "lucide-react";
+import Link from "next/link";
+import BannerAd from "@/components/bannerad";
 
 export const metadata = {
   title: "Documentation - LearAPI | Complete API Learning Guide",
-  description:
-    "Comprehensive documentation for LearAPI. Learn how to use our API explorer, understand endpoints, and get started with API testing.",
+  description: "Comprehensive documentation for LearAPI. Learn how to use our API explorer, understand endpoints, and get started with API testing.",
   keywords: "API documentation, API guide, REST API tutorial, API testing guide, developer documentation",
-}
+};
 
 export default function DocsPage() {
   return (
@@ -70,17 +70,13 @@ export default function DocsPage() {
                   <Zap className="h-4 w-4 sm:h-5 sm:w-5" />
                   Quick Start
                 </CardTitle>
-                <CardDescription className="text-xs sm:text-sm">
-                  Get up and running with LearAPI Explorer in minutes
-                </CardDescription>
+                <CardDescription className="text-xs sm:text-sm">Get up and running with LearAPI Explorer in minutes</CardDescription>
               </CardHeader>
               <CardContent className="space-y-4 sm:space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
                   <div>
                     <h4 className="font-semibold mb-2 sm:mb-3 text-sm sm:text-base">1. Choose an API Category</h4>
-                    <p className="text-xs sm:text-sm text-muted-foreground mb-2 sm:mb-3">
-                      Navigate to the Explorer and select from our available API categories:
-                    </p>
+                    <p className="text-xs sm:text-sm text-muted-foreground mb-2 sm:mb-3">Navigate to the Explorer and select from our available API categories:</p>
                     <ul className="text-xs sm:text-sm space-y-1">
                       <li className="flex items-center gap-2">
                         <CheckCircle className="h-3 w-3 sm:h-4 sm:w-4 text-green-600" />
@@ -102,9 +98,7 @@ export default function DocsPage() {
                   </div>
                   <div>
                     <h4 className="font-semibold mb-2 sm:mb-3 text-sm sm:text-base">2. Test an Endpoint</h4>
-                    <p className="text-xs sm:text-sm text-muted-foreground mb-2 sm:mb-3">
-                      Click on any endpoint to view its details and test it:
-                    </p>
+                    <p className="text-xs sm:text-sm text-muted-foreground mb-2 sm:mb-3">Click on any endpoint to view its details and test it:</p>
                     <ul className="text-xs sm:text-sm space-y-1">
                       <li className="flex items-center gap-2">
                         <CheckCircle className="h-3 w-3 sm:h-4 sm:w-4 text-green-600" />
@@ -127,33 +121,26 @@ export default function DocsPage() {
                 </div>
               </CardContent>
             </Card>
+            <BannerAd />
 
             <Card>
               <CardHeader>
                 <CardTitle className="text-lg sm:text-xl">Understanding the Interface</CardTitle>
-                <CardDescription className="text-xs sm:text-sm">
-                  Learn about the different sections of the API Explorer
-                </CardDescription>
+                <CardDescription className="text-xs sm:text-sm">Learn about the different sections of the API Explorer</CardDescription>
               </CardHeader>
               <CardContent className="space-y-3 sm:space-y-4">
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
                   <div className="p-3 sm:p-4 border rounded-lg">
                     <h4 className="font-semibold mb-1 sm:mb-2 text-sm sm:text-base">Sidebar Navigation</h4>
-                    <p className="text-xs sm:text-sm text-muted-foreground">
-                      Browse API categories and endpoints. Use the search bar to quickly find specific endpoints.
-                    </p>
+                    <p className="text-xs sm:text-sm text-muted-foreground">Browse API categories and endpoints. Use the search bar to quickly find specific endpoints.</p>
                   </div>
                   <div className="p-3 sm:p-4 border rounded-lg">
                     <h4 className="font-semibold mb-1 sm:mb-2 text-sm sm:text-base">Request Panel</h4>
-                    <p className="text-xs sm:text-sm text-muted-foreground">
-                      Configure parameters, headers, and request body. Click "Try it" to send requests.
-                    </p>
+                    <p className="text-xs sm:text-sm text-muted-foreground">Configure parameters, headers, and request body. Click "Try it" to send requests.</p>
                   </div>
                   <div className="p-3 sm:p-4 border rounded-lg sm:col-span-2 lg:col-span-1">
                     <h4 className="font-semibold mb-1 sm:mb-2 text-sm sm:text-base">Response Viewer</h4>
-                    <p className="text-xs sm:text-sm text-muted-foreground">
-                      View formatted JSON responses, status codes, headers, and response times.
-                    </p>
+                    <p className="text-xs sm:text-sm text-muted-foreground">View formatted JSON responses, status codes, headers, and response times.</p>
                   </div>
                 </div>
               </CardContent>
@@ -162,9 +149,7 @@ export default function DocsPage() {
             <Card>
               <CardHeader>
                 <CardTitle className="text-lg sm:text-xl">Features Overview</CardTitle>
-                <CardDescription className="text-xs sm:text-sm">
-                  Discover all the powerful features available in LearAPI Explorer
-                </CardDescription>
+                <CardDescription className="text-xs sm:text-sm">Discover all the powerful features available in LearAPI Explorer</CardDescription>
               </CardHeader>
               <CardContent>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
@@ -173,18 +158,14 @@ export default function DocsPage() {
                       <Code className="h-4 w-4 sm:h-5 sm:w-5 text-primary mt-0.5" />
                       <div>
                         <h4 className="font-medium text-sm sm:text-base">Code Generation</h4>
-                        <p className="text-xs sm:text-sm text-muted-foreground">
-                          Get ready-to-use code snippets in multiple programming languages
-                        </p>
+                        <p className="text-xs sm:text-sm text-muted-foreground">Get ready-to-use code snippets in multiple programming languages</p>
                       </div>
                     </div>
                     <div className="flex items-start gap-2 sm:gap-3">
                       <Zap className="h-4 w-4 sm:h-5 sm:w-5 text-primary mt-0.5" />
                       <div>
                         <h4 className="font-medium text-sm sm:text-base">Real-time Testing</h4>
-                        <p className="text-xs sm:text-sm text-muted-foreground">
-                          Send actual HTTP requests and see live responses
-                        </p>
+                        <p className="text-xs sm:text-sm text-muted-foreground">Send actual HTTP requests and see live responses</p>
                       </div>
                     </div>
                   </div>
@@ -193,18 +174,14 @@ export default function DocsPage() {
                       <Shield className="h-4 w-4 sm:h-5 sm:w-5 text-primary mt-0.5" />
                       <div>
                         <h4 className="font-medium text-sm sm:text-base">Secure Requests</h4>
-                        <p className="text-xs sm:text-sm text-muted-foreground">
-                          All requests are made securely with proper error handling
-                        </p>
+                        <p className="text-xs sm:text-sm text-muted-foreground">All requests are made securely with proper error handling</p>
                       </div>
                     </div>
                     <div className="flex items-start gap-2 sm:gap-3">
                       <Book className="h-4 w-4 sm:h-5 sm:w-5 text-primary mt-0.5" />
                       <div>
                         <h4 className="font-medium text-sm sm:text-base">Comprehensive Docs</h4>
-                        <p className="text-xs sm:text-sm text-muted-foreground">
-                          Detailed documentation for every endpoint with examples
-                        </p>
+                        <p className="text-xs sm:text-sm text-muted-foreground">Detailed documentation for every endpoint with examples</p>
                       </div>
                     </div>
                   </div>
@@ -217,9 +194,7 @@ export default function DocsPage() {
             <Card>
               <CardHeader>
                 <CardTitle className="text-lg sm:text-xl">Available APIs</CardTitle>
-                <CardDescription className="text-xs sm:text-sm">
-                  Complete reference for all available API endpoints
-                </CardDescription>
+                <CardDescription className="text-xs sm:text-sm">Complete reference for all available API endpoints</CardDescription>
               </CardHeader>
               <CardContent className="space-y-4 sm:space-y-6">
                 <div className="space-y-3 sm:space-y-4">
@@ -229,12 +204,9 @@ export default function DocsPage() {
                       <h4 className="font-semibold text-sm sm:text-base">Random User API</h4>
                     </div>
                     <p className="text-xs sm:text-sm text-muted-foreground mb-2">
-                      Generate random user data with complete profiles including names, addresses, and contact
-                      information.
+                      Generate random user data with complete profiles including names, addresses, and contact information.
                     </p>
-                    <code className="text-xs sm:text-sm bg-muted px-2 py-1 rounded break-all">
-                      https://randomuser.me/api/
-                    </code>
+                    <code className="text-xs sm:text-sm bg-muted px-2 py-1 rounded break-all">https://randomuser.me/api/</code>
                   </div>
 
                   <div className="border rounded-lg p-3 sm:p-4">
@@ -242,12 +214,8 @@ export default function DocsPage() {
                       <Badge className="bg-green-100 text-green-800 w-fit text-xs">GET</Badge>
                       <h4 className="font-semibold text-sm sm:text-base">Quotable API</h4>
                     </div>
-                    <p className="text-xs sm:text-sm text-muted-foreground mb-2">
-                      Fetch inspirational quotes from famous personalities with author information and tags.
-                    </p>
-                    <code className="text-xs sm:text-sm bg-muted px-2 py-1 rounded break-all">
-                      https://api.quotable.io/random
-                    </code>
+                    <p className="text-xs sm:text-sm text-muted-foreground mb-2">Fetch inspirational quotes from famous personalities with author information and tags.</p>
+                    <code className="text-xs sm:text-sm bg-muted px-2 py-1 rounded break-all">https://api.quotable.io/random</code>
                   </div>
 
                   <div className="border rounded-lg p-3 sm:p-4">
@@ -255,12 +223,8 @@ export default function DocsPage() {
                       <Badge className="bg-green-100 text-green-800 w-fit text-xs">GET</Badge>
                       <h4 className="font-semibold text-sm sm:text-base">Fake Store API</h4>
                     </div>
-                    <p className="text-xs sm:text-sm text-muted-foreground mb-2">
-                      Access product catalog data with prices, descriptions, images, and ratings.
-                    </p>
-                    <code className="text-xs sm:text-sm bg-muted px-2 py-1 rounded break-all">
-                      https://fakestoreapi.com/products
-                    </code>
+                    <p className="text-xs sm:text-sm text-muted-foreground mb-2">Access product catalog data with prices, descriptions, images, and ratings.</p>
+                    <code className="text-xs sm:text-sm bg-muted px-2 py-1 rounded break-all">https://fakestoreapi.com/products</code>
                   </div>
 
                   <div className="border rounded-lg p-3 sm:p-4">
@@ -268,12 +232,8 @@ export default function DocsPage() {
                       <Badge className="bg-green-100 text-green-800 w-fit text-xs">GET</Badge>
                       <h4 className="font-semibold text-sm sm:text-base">Official Joke API</h4>
                     </div>
-                    <p className="text-xs sm:text-sm text-muted-foreground mb-2">
-                      Get programming jokes and general humor with setup and punchline format.
-                    </p>
-                    <code className="text-xs sm:text-sm bg-muted px-2 py-1 rounded break-all">
-                      https://official-joke-api.appspot.com/random_joke
-                    </code>
+                    <p className="text-xs sm:text-sm text-muted-foreground mb-2">Get programming jokes and general humor with setup and punchline format.</p>
+                    <code className="text-xs sm:text-sm bg-muted px-2 py-1 rounded break-all">https://official-joke-api.appspot.com/random_joke</code>
                   </div>
                 </div>
               </CardContent>
@@ -284,9 +244,7 @@ export default function DocsPage() {
             <Card>
               <CardHeader>
                 <CardTitle className="text-lg sm:text-xl">Code Examples</CardTitle>
-                <CardDescription className="text-xs sm:text-sm">
-                  Ready-to-use code snippets for different programming languages
-                </CardDescription>
+                <CardDescription className="text-xs sm:text-sm">Ready-to-use code snippets for different programming languages</CardDescription>
               </CardHeader>
               <CardContent>
                 <Tabs defaultValue="javascript" className="w-full">
@@ -390,9 +348,7 @@ print_r($data['results'][0]);
             <Card>
               <CardHeader>
                 <CardTitle className="text-lg sm:text-xl">API Best Practices</CardTitle>
-                <CardDescription className="text-xs sm:text-sm">
-                  Guidelines for effective API usage and testing
-                </CardDescription>
+                <CardDescription className="text-xs sm:text-sm">Guidelines for effective API usage and testing</CardDescription>
               </CardHeader>
               <CardContent className="space-y-4 sm:space-y-6">
                 <div className="space-y-3 sm:space-y-4">
@@ -400,36 +356,28 @@ print_r($data['results'][0]);
                     <CheckCircle className="h-4 w-4 sm:h-5 sm:w-5 text-green-600 mt-0.5" />
                     <div>
                       <h4 className="font-semibold text-sm sm:text-base">Handle Errors Gracefully</h4>
-                      <p className="text-xs sm:text-sm text-muted-foreground">
-                        Always implement proper error handling for network requests and API responses.
-                      </p>
+                      <p className="text-xs sm:text-sm text-muted-foreground">Always implement proper error handling for network requests and API responses.</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-2 sm:gap-3">
                     <CheckCircle className="h-4 w-4 sm:h-5 sm:w-5 text-green-600 mt-0.5" />
                     <div>
                       <h4 className="font-semibold text-sm sm:text-base">Respect Rate Limits</h4>
-                      <p className="text-xs sm:text-sm text-muted-foreground">
-                        Be mindful of API rate limits and implement appropriate delays between requests.
-                      </p>
+                      <p className="text-xs sm:text-sm text-muted-foreground">Be mindful of API rate limits and implement appropriate delays between requests.</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-2 sm:gap-3">
                     <CheckCircle className="h-4 w-4 sm:h-5 sm:w-5 text-green-600 mt-0.5" />
                     <div>
                       <h4 className="font-semibold text-sm sm:text-base">Use HTTPS</h4>
-                      <p className="text-xs sm:text-sm text-muted-foreground">
-                        Always use HTTPS endpoints for secure data transmission.
-                      </p>
+                      <p className="text-xs sm:text-sm text-muted-foreground">Always use HTTPS endpoints for secure data transmission.</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-2 sm:gap-3">
                     <CheckCircle className="h-4 w-4 sm:h-5 sm:w-5 text-green-600 mt-0.5" />
                     <div>
                       <h4 className="font-semibold text-sm sm:text-base">Validate Responses</h4>
-                      <p className="text-xs sm:text-sm text-muted-foreground">
-                        Always validate API responses before using the data in your application.
-                      </p>
+                      <p className="text-xs sm:text-sm text-muted-foreground">Always validate API responses before using the data in your application.</p>
                     </div>
                   </div>
                 </div>
@@ -441,9 +389,7 @@ print_r($data['results'][0]);
             <Card>
               <CardHeader>
                 <CardTitle className="text-lg sm:text-xl">Common Issues & Solutions</CardTitle>
-                <CardDescription className="text-xs sm:text-sm">
-                  Troubleshooting guide for common problems
-                </CardDescription>
+                <CardDescription className="text-xs sm:text-sm">Troubleshooting guide for common problems</CardDescription>
               </CardHeader>
               <CardContent className="space-y-4 sm:space-y-6">
                 <div className="space-y-3 sm:space-y-4">
@@ -452,9 +398,7 @@ print_r($data['results'][0]);
                       <AlertTriangle className="h-4 w-4 sm:h-5 sm:w-5 text-yellow-600 mt-0.5" />
                       <h4 className="font-semibold text-sm sm:text-base">CORS Errors</h4>
                     </div>
-                    <p className="text-xs sm:text-sm text-muted-foreground mb-2">
-                      If you encounter CORS errors when making requests from your browser:
-                    </p>
+                    <p className="text-xs sm:text-sm text-muted-foreground mb-2">If you encounter CORS errors when making requests from your browser:</p>
                     <ul className="text-xs sm:text-sm space-y-1 ml-4 sm:ml-6">
                       <li>• Use server-side requests instead of client-side</li>
                       <li>• Configure CORS headers on your server</li>
@@ -467,9 +411,7 @@ print_r($data['results'][0]);
                       <AlertTriangle className="h-4 w-4 sm:h-5 sm:w-5 text-yellow-600 mt-0.5" />
                       <h4 className="font-semibold text-sm sm:text-base">Rate Limiting</h4>
                     </div>
-                    <p className="text-xs sm:text-sm text-muted-foreground mb-2">
-                      If you receive 429 (Too Many Requests) errors:
-                    </p>
+                    <p className="text-xs sm:text-sm text-muted-foreground mb-2">If you receive 429 (Too Many Requests) errors:</p>
                     <ul className="text-xs sm:text-sm space-y-1 ml-4 sm:ml-6">
                       <li>• Wait before making additional requests</li>
                       <li>• Implement exponential backoff</li>
@@ -498,5 +440,5 @@ print_r($data['results'][0]);
 
       <Footer />
     </div>
-  )
+  );
 }

@@ -1,20 +1,20 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Separator } from "@/components/ui/separator"
-import { Shield, Eye, Lock, Users, Database, Mail } from "lucide-react"
-import { Header } from "@/components/header"
-import { Footer } from "@/components/footer"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Separator } from "@/components/ui/separator";
+import { Shield, Eye, Lock, Users, Database, Mail } from "lucide-react";
+import { Header } from "@/components/header";
+import { Footer } from "@/components/footer";
+import Ads from "@/components/ads";
 
 export const metadata = {
   title: "Privacy Policy - LearAPI",
   description: "Learn how LearAPI protects your privacy and handles your data with transparency and security.",
-}
+};
 
 export default function PrivacyPage() {
   return (
     <div className="min-h-screen bg-background">
       <Header />
-
       <main className="container mx-auto px-3 sm:px-4 py-8 sm:py-12 max-w-4xl">
         {/* Hero Section */}
         <div className="text-center mb-8 sm:mb-12">
@@ -24,13 +24,12 @@ export default function PrivacyPage() {
             </div>
           </div>
           <h1 className="text-2xl xs:text-3xl sm:text-4xl font-bold mb-3 sm:mb-4">Privacy Policy</h1>
-          <p className="text-sm xs:text-base sm:text-xl text-muted-foreground mb-3 sm:mb-4">
-            Your privacy is important to us. Learn how we protect and handle your data.
-          </p>
+          <p className="text-sm xs:text-base sm:text-xl text-muted-foreground mb-3 sm:mb-4">Your privacy is important to us. Learn how we protect and handle your data.</p>
           <Badge variant="secondary" className="mb-4 sm:mb-6 text-xs sm:text-sm">
             Last updated: December 2024
           </Badge>
         </div>
+        <Ads />
 
         {/* Quick Overview */}
         <Card className="mb-6 sm:mb-8">
@@ -39,9 +38,7 @@ export default function PrivacyPage() {
               <Eye className="h-4 w-4 sm:h-5 sm:w-5" />
               Quick Overview
             </CardTitle>
-            <CardDescription className="text-xs sm:text-sm">
-              Here's what you need to know about how we handle your information
-            </CardDescription>
+            <CardDescription className="text-xs sm:text-sm">Here's what you need to know about how we handle your information</CardDescription>
           </CardHeader>
           <CardContent>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
@@ -51,9 +48,7 @@ export default function PrivacyPage() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-xs sm:text-sm">Data Security</h4>
-                  <p className="text-xs sm:text-sm text-muted-foreground">
-                    We use industry-standard encryption and security measures
-                  </p>
+                  <p className="text-xs sm:text-sm text-muted-foreground">We use industry-standard encryption and security measures</p>
                 </div>
               </div>
               <div className="flex items-start gap-2 sm:gap-3">
@@ -62,9 +57,7 @@ export default function PrivacyPage() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-xs sm:text-sm">No Data Selling</h4>
-                  <p className="text-xs sm:text-sm text-muted-foreground">
-                    We never sell your personal information to third parties
-                  </p>
+                  <p className="text-xs sm:text-sm text-muted-foreground">We never sell your personal information to third parties</p>
                 </div>
               </div>
               <div className="flex items-start gap-2 sm:gap-3">
@@ -73,9 +66,7 @@ export default function PrivacyPage() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-xs sm:text-sm">Minimal Data</h4>
-                  <p className="text-xs sm:text-sm text-muted-foreground">
-                    We only collect data necessary for service functionality
-                  </p>
+                  <p className="text-xs sm:text-sm text-muted-foreground">We only collect data necessary for service functionality</p>
                 </div>
               </div>
               <div className="flex items-start gap-2 sm:gap-3">
@@ -84,9 +75,7 @@ export default function PrivacyPage() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-xs sm:text-sm">Transparent Communication</h4>
-                  <p className="text-xs sm:text-sm text-muted-foreground">
-                    Clear notifications about any policy changes
-                  </p>
+                  <p className="text-xs sm:text-sm text-muted-foreground">Clear notifications about any policy changes</p>
                 </div>
               </div>
             </div>
@@ -140,9 +129,7 @@ export default function PrivacyPage() {
                   <Badge variant="outline" className="mt-1 text-xs">
                     Improvement
                   </Badge>
-                  <p className="text-xs sm:text-sm">
-                    Analyze usage patterns to improve our services and user experience
-                  </p>
+                  <p className="text-xs sm:text-sm">Analyze usage patterns to improve our services and user experience</p>
                 </div>
                 <div className="flex items-start gap-2 sm:gap-3">
                   <Badge variant="outline" className="mt-1 text-xs">
@@ -172,19 +159,12 @@ export default function PrivacyPage() {
             </CardHeader>
             <CardContent className="space-y-3 sm:space-y-4">
               <div className="p-3 sm:p-4 bg-green-50 border border-green-200 rounded-lg">
-                <h4 className="font-semibold text-green-800 mb-2 text-sm sm:text-base">
-                  We do not sell your personal information
-                </h4>
-                <p className="text-xs sm:text-sm text-green-700">
-                  LearAPI never sells, rents, or trades your personal information to third parties for marketing
-                  purposes.
-                </p>
+                <h4 className="font-semibold text-green-800 mb-2 text-sm sm:text-base">We do not sell your personal information</h4>
+                <p className="text-xs sm:text-sm text-green-700">LearAPI never sells, rents, or trades your personal information to third parties for marketing purposes.</p>
               </div>
 
               <div>
-                <h4 className="font-semibold mb-2 text-sm sm:text-base">
-                  We may share information in these limited circumstances:
-                </h4>
+                <h4 className="font-semibold mb-2 text-sm sm:text-base">We may share information in these limited circumstances:</h4>
                 <ul className="list-disc list-inside space-y-1 text-muted-foreground text-xs sm:text-sm">
                   <li>
                     <strong>Service Providers:</strong> Trusted partners who help us operate our platform
@@ -208,9 +188,7 @@ export default function PrivacyPage() {
               <CardTitle className="text-lg sm:text-xl">4. Data Security</CardTitle>
             </CardHeader>
             <CardContent className="space-y-3 sm:space-y-4">
-              <p className="text-muted-foreground text-xs sm:text-sm">
-                We implement appropriate technical and organizational measures to protect your information:
-              </p>
+              <p className="text-muted-foreground text-xs sm:text-sm">We implement appropriate technical and organizational measures to protect your information:</p>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4">
                 <div className="p-3 sm:p-4 border rounded-lg">
@@ -240,9 +218,7 @@ export default function PrivacyPage() {
               <CardTitle className="text-lg sm:text-xl">5. Your Rights and Choices</CardTitle>
             </CardHeader>
             <CardContent className="space-y-3 sm:space-y-4">
-              <p className="text-muted-foreground mb-3 sm:mb-4 text-xs sm:text-sm">
-                You have several rights regarding your personal information:
-              </p>
+              <p className="text-muted-foreground mb-3 sm:mb-4 text-xs sm:text-sm">You have several rights regarding your personal information:</p>
 
               <div className="space-y-2 sm:space-y-3">
                 <div className="flex items-start gap-2 sm:gap-3">
@@ -261,9 +237,7 @@ export default function PrivacyPage() {
                   <Badge variant="secondary" className="text-xs">
                     Deletion
                   </Badge>
-                  <p className="text-xs sm:text-sm">
-                    Request deletion of your personal information (subject to legal requirements)
-                  </p>
+                  <p className="text-xs sm:text-sm">Request deletion of your personal information (subject to legal requirements)</p>
                 </div>
                 <div className="flex items-start gap-2 sm:gap-3">
                   <Badge variant="secondary" className="text-xs">
@@ -295,9 +269,7 @@ export default function PrivacyPage() {
               <CardTitle className="text-lg sm:text-xl">6. Contact Us</CardTitle>
             </CardHeader>
             <CardContent>
-              <p className="text-muted-foreground mb-3 sm:mb-4 text-xs sm:text-sm">
-                If you have questions about this privacy policy or our data practices, please contact us:
-              </p>
+              <p className="text-muted-foreground mb-3 sm:mb-4 text-xs sm:text-sm">If you have questions about this privacy policy or our data practices, please contact us:</p>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
                 <div>
@@ -323,8 +295,7 @@ export default function PrivacyPage() {
               <div className="mt-4 sm:mt-6 p-3 sm:p-4 border rounded-lg">
                 <h4 className="font-semibold mb-2 text-sm sm:text-base">Response Time</h4>
                 <p className="text-xs sm:text-sm text-muted-foreground">
-                  We aim to respond to all privacy-related inquiries within 30 days. For urgent matters, please indicate
-                  "URGENT" in your subject line.
+                  We aim to respond to all privacy-related inquiries within 30 days. For urgent matters, please indicate "URGENT" in your subject line.
                 </p>
               </div>
             </CardContent>
@@ -334,5 +305,5 @@ export default function PrivacyPage() {
 
       <Footer />
     </div>
-  )
+  );
 }
