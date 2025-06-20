@@ -39,7 +39,7 @@ export function JsonViewer({ data }: JsonViewerProps) {
       </div>
 
       {/* Scrollable JSON content */}
-      <pre className="p-4 bg-muted/50 overflow-x-auto overflow-y-auto max-h-96 text-sm json-data-show">
+      <pre className="p-4 bg-muted/50 overflow-x-auto overflow-y-auto max-h-96 text-sm json-data-show ">
         <code className="block min-w-full whitespace-pre-wrap break-words">{jsonString}</code>
       </pre>
     </div>
