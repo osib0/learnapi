@@ -327,8 +327,8 @@ export default function HomePage() {
                       )}
 
                       {/* Raw JSON Response */}
-                      <div className="relative max-h-60 sm:max-h-80 overflow-auto">
-                        <pre className="p-4 bg-muted rounded-lg text-xs leading-relaxed whitespace-pre-wrap break-words">
+                      <div className="relative max-h-60 sm:max-h-80 w-full overflow-auto json-data-show">
+                        <pre className="p-4 bg-muted rounded-lg text-xs leading-relaxed whitespace-pre text-left overflow-x-auto max-h-60 sm:max-h-80 json-data-show">
                           <code>{JSON.stringify(apiResponse, null, 2)}</code>
                         </pre>
                       </div>

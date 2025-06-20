@@ -1,54 +1,52 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import Link from "next/link"
-import { usePathname } from "next/navigation"
-import { Code, ArrowLeft, Search, Menu } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
-import { Badge } from "@/components/ui/badge"
-import { ThemeToggle } from "@/components/theme-toggle"
-import { apiCategories } from "@/lib/api-data"
-import { Suspense } from "react"
+import * as React from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { Code, ArrowLeft, Search, Menu } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Badge } from "@/components/ui/badge";
+import { ThemeToggle } from "@/components/theme-toggle";
+import { apiCategories } from "@/lib/api-data";
+import { Suspense } from "react";
 
 function SidebarContent() {
-  const [searchQuery, setSearchQuery] = React.useState("")
-  const pathname = usePathname()
+  const [searchQuery, setSearchQuery] = React.useState("");
+  const pathname = usePathname();
 
   // Filter endpoints based on search
   const filteredCategories = React.useMemo(() => {
-    if (!searchQuery) return apiCategories
+    if (!searchQuery) return apiCategories;
 
     return apiCategories
       .map((category) => ({
         ...category,
         endpoints: category.endpoints.filter(
-          (endpoint) =>
-            endpoint.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-            endpoint.description.toLowerCase().includes(searchQuery.toLowerCase()),
+          (endpoint) => endpoint.title.toLowerCase().includes(searchQuery.toLowerCase()) || endpoint.description.toLowerCase().includes(searchQuery.toLowerCase())
         ),
       }))
-      .filter((category) => category.endpoints.length > 0)
-  }, [searchQuery])
+      .filter((category) => category.endpoints.length > 0);
+  }, [searchQuery]);
 
   // Get method color
   const getMethodColor = (method: string) => {
     switch (method.toUpperCase()) {
       case "GET":
-        return "bg-green-100 text-green-800"
+        return "bg-green-100 text-green-800";
       case "POST":
-        return "bg-blue-100 text-blue-800"
+        return "bg-blue-100 text-blue-800";
       case "PUT":
-        return "bg-orange-100 text-orange-800"
+        return "bg-orange-100 text-orange-800";
       case "DELETE":
-        return "bg-red-100 text-red-800"
+        return "bg-red-100 text-red-800";
       case "PATCH":
-        return "bg-purple-100 text-purple-800"
+        return "bg-purple-100 text-purple-800";
       default:
-        return "bg-gray-100 text-gray-800"
+        return "bg-gray-100 text-gray-800";
     }
-  }
+  };
 
   return (
     <div className="flex flex-col h-full">
@@ -56,12 +54,7 @@ function SidebarContent() {
       <div className="p-3 sm:p-4 border-b">
         <div className="relative">
           <Search className="absolute left-2 sm:left-3 top-1/2 h-3 w-3 sm:h-4 sm:w-4 -translate-y-1/2 text-muted-foreground" />
-          <Input
-            placeholder="Search endpoints..."
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-            className="pl-8 sm:pl-9 text-xs sm:text-sm h-8 sm:h-10"
-          />
+          <Input placeholder="Search endpoints..." value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} className="pl-8 sm:pl-9 text-xs sm:text-sm h-8 sm:h-10" />
         </div>
       </div>
 
@@ -81,9 +74,7 @@ function SidebarContent() {
                 <Link
                   key={endpoint.id}
                   href={`/explore/${category.id}/${endpoint.id}`}
-                  className={`block p-2 sm:p-3 rounded-lg border transition-colors hover:bg-accent ${
-                    pathname.includes(endpoint.id) ? "bg-accent border-primary" : ""
-                  }`}
+                  className={`block p-2 sm:p-3 rounded-lg border transition-colors hover:bg-accent ${pathname.includes(endpoint.id) ? "bg-accent border-primary" : ""}`}
                 >
                   <div className="flex items-center gap-2 mb-1">
                     <Badge variant="secondary" className={`text-xs ${getMethodColor(endpoint.method)}`}>
@@ -99,15 +90,11 @@ function SidebarContent() {
         ))}
       </div>
     </div>
-  )
+  );
 }
 
-export default function ExploreLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
-  const [sidebarOpen, setSidebarOpen] = React.useState(false)
+export default function ExploreLayout({ children }: { children: React.ReactNode }) {
+  const [sidebarOpen, setSidebarOpen] = React.useState(false);
 
   return (
     <div className="min-h-screen bg-background">
@@ -140,7 +127,7 @@ export default function ExploreLayout({
               <div className="flex h-5 w-5 sm:h-6 sm:w-6 items-center justify-center rounded bg-primary text-primary-foreground">
                 <Code className="h-2.5 w-2.5 sm:h-3 sm:w-3" />
               </div>
-              <span className="font-semibold text-sm sm:text-base">LearAPI Explorer</span>
+              <span className="font-semibold text-sm sm:text-base">API Explorer</span>
             </div>
           </div>
           <ThemeToggle />
@@ -161,5 +148,5 @@ export default function ExploreLayout({
         </main>
       </div>
     </div>
-  )
+  );
 }

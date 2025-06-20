@@ -91,6 +91,10 @@
   /* 350px and up */
 }
 
+body {
+  overflow-x: hidden !important;
+}
+
 .json-viewer {
   font-family: "Monaco", "Menlo", "Ubuntu Mono", monospace;
   font-size: 12px;
@@ -143,6 +147,9 @@
   [role="button"] {
     min-height: 44px;
     min-width: 44px;
+  }
+  .json-data-show {
+    max-width: 300px !important;
   }
 }
 
