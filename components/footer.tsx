@@ -63,7 +63,7 @@ export function Footer() {
         </div>
 
         <div className="border-t mt-6 sm:mt-8 pt-6 sm:pt-8 text-center text-xs sm:text-sm text-muted-foreground">
-          <p>&copy; 2024 LearAPI. All rights reserved.</p>
+          <p>&copy; 2025 LearAPI. All rights reserved.</p>
           <p className="mt-1 sm:mt-2 text-xs">
             Developed by <span className="font-semibold text-primary">Osib</span>
           </p>

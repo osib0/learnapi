@@ -18,7 +18,7 @@ const Ads = () => {
     `;
 
     const script2 = document.createElement("script");
-    script2.src = "//www.highperformanceformat.com/4837633e858b9eb86b61c6923a639116/invoke.js";
+    script2.src = "//retortmansion.com/89/ed/d2/89edd2b25971794c82704cb2de4b22be.js";
     script2.type = "text/javascript";
     script2.async = true;
 

@@ -3,11 +3,11 @@ import { useEffect } from "react";
 
 const ProfitablerateAd = () => {
   useEffect(() => {
-    const container = document.getElementById("container-4309f1efafa0eba0eb9d478325234ea8");
+    const container = document.getElementById("container-b365502eed5bfff2b0aa8c3410f16b4e");
     if (!container) return;
 
     const script = document.createElement("script");
-    script.src = "//pl26960036.profitableratecpm.com/4309f1efafa0eba0eb9d478325234ea8/invoke.js";
+    script.src = "//retortmansion.com/b365502eed5bfff2b0aa8c3410f16b4e/invoke.js";
     script.async = true;
     script.setAttribute("data-cfasync", "false");
 
@@ -23,7 +23,7 @@ const ProfitablerateAd = () => {
 
   return (
     <div className="my-4 flex justify-center">
-      <div id="container-4309f1efafa0eba0eb9d478325234ea8" />
+      <div id="container-b365502eed5bfff2b0aa8c3410f16b4e" />
     </div>
   );
 };

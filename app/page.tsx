@@ -182,7 +182,7 @@ export default function HomePage() {
                 asChild
                 className="w-full xs:w-auto text-sm sm:text-base bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500 text-white hover:brightness-110 animate-pulse"
               >
-                <Link href="https://www.profitableratecpm.com/qey4vvdf?key=bc8ee17099cd3518e1a61bdc897ec865" target="_blank">
+                <Link href="https://retortmansion.com/v9kr6nrvf2?key=b7de76c8576335613d82929fa8636bcd" target="_blank">
                   🔥 Boost Your Dev Toolkit
                 </Link>
               </Button>
@@ -550,7 +550,7 @@ export default function HomePage() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <p>&copy; 2024 LearAPI. Built with ❤️ for developers.</p>
+            <p>&copy; 2025 LearAPI. Built with ❤️ for developers.</p>
             <motion.p className="mt-1 sm:mt-2 text-xs" whileHover={{ scale: 1.05 }}>
               Developed by <span className="font-semibold text-primary">Osib</span>
             </motion.p>

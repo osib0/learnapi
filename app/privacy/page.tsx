@@ -26,7 +26,7 @@ export default function PrivacyPage() {
           <h1 className="text-2xl xs:text-3xl sm:text-4xl font-bold mb-3 sm:mb-4">Privacy Policy</h1>
           <p className="text-sm xs:text-base sm:text-xl text-muted-foreground mb-3 sm:mb-4">Your privacy is important to us. Learn how we protect and handle your data.</p>
           <Badge variant="secondary" className="mb-4 sm:mb-6 text-xs sm:text-sm">
-            Last updated: December 2024
+            Last updated: December 2025
           </Badge>
         </div>
         <Ads />
