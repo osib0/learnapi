@@ -11,6 +11,8 @@ import { Badge } from "@/components/ui/badge";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { apiCategories } from "@/lib/api-data";
 import { Suspense } from "react";
+import Image from "next/image";
+import logo from "@/public/favicon.ico";
 
 function SidebarContent() {
   const [searchQuery, setSearchQuery] = React.useState("");
@@ -122,13 +124,9 @@ export default function ExploreLayout({ children }: { children: React.ReactNode 
                 <span className="xs:hidden">Back</span>
               </Link>
             </Button>
-
-            <div className="flex items-center space-x-2">
-              <div className="flex h-5 w-5 sm:h-6 sm:w-6 items-center justify-center rounded bg-primary text-primary-foreground">
-                <Code className="h-2.5 w-2.5 sm:h-3 sm:w-3" />
-              </div>
-              <span className="font-semibold text-sm sm:text-base">API Explorer</span>
-            </div>
+            <Link href="/" className="flex items-center space-x-2">
+              <Image src={logo} alt="logo" width={65} objectFit="contain" />
+            </Link>
           </div>
           <ThemeToggle />
         </div>

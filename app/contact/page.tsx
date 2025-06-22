@@ -73,7 +73,7 @@ export default function ContactPage() {
           </div>
           <h1 className="text-2xl xs:text-3xl sm:text-4xl font-bold mb-3 sm:mb-4">Get in Touch</h1>
           <p className="text-sm xs:text-base sm:text-xl text-muted-foreground mb-4 sm:mb-6 max-w-3xl mx-auto">
-            Have questions about LearAPI? Need help with integration? Want to suggest a feature? We're here to help!
+            Have questions about LearnAPI? Need help with integration? Want to suggest a feature? We're here to help!
           </p>
           <div className="flex flex-wrap justify-center gap-2 sm:gap-4">
             <Badge variant="secondary" className="bg-green-100 text-green-800 text-xs sm:text-sm">
@@ -244,7 +244,7 @@ export default function ContactPage() {
                   <Mail className="h-4 w-4 sm:h-5 sm:w-5 text-primary mt-0.5" />
                   <div>
                     <p className="font-medium text-sm sm:text-base">Email</p>
-                    <p className="text-xs sm:text-sm text-muted-foreground">support@learapi.com</p>
+                    <p className="text-xs sm:text-sm text-muted-foreground">support@learnapi.com</p>
                     <p className="text-xs text-muted-foreground">Response within 24 hours</p>
                   </div>
                 </div>
@@ -323,7 +323,7 @@ export default function ContactPage() {
                 <Button variant="ghost" className="w-full justify-start text-xs sm:text-sm" asChild>
                   <a href="/explore">
                     <Zap className="h-3 w-3 sm:h-4 sm:w-4 mr-2" />
-                    API Explorer
+                    Explorer
                   </a>
                 </Button>
                 <Button variant="ghost" className="w-full justify-start text-xs sm:text-sm">
@@ -345,7 +345,7 @@ export default function ContactPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
             <Card>
               <CardHeader>
-                <CardTitle className="text-base sm:text-lg">How do I get started with LearAPI?</CardTitle>
+                <CardTitle className="text-base sm:text-lg">How do I get started with LearnAPI?</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-xs sm:text-sm text-muted-foreground">
@@ -356,11 +356,11 @@ export default function ContactPage() {
 
             <Card>
               <CardHeader>
-                <CardTitle className="text-base sm:text-lg">Is LearAPI free to use?</CardTitle>
+                <CardTitle className="text-base sm:text-lg">Is LearnAPI free to use?</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-xs sm:text-sm text-muted-foreground">
-                  Yes! LearAPI is completely free for learning and testing purposes. We provide access to multiple public APIs without any cost.
+                  Yes! LearnAPI is completely free for learning and testing purposes. We provide access to multiple public APIs without any cost.
                 </p>
               </CardContent>
             </Card>
@@ -371,7 +371,7 @@ export default function ContactPage() {
               </CardHeader>
               <CardContent>
                 <p className="text-xs sm:text-sm text-muted-foreground">
-                  LearAPI is for educational purposes. For commercial use, please refer to the individual API providers' terms of service.
+                  LearnAPI is for educational purposes. For commercial use, please refer to the individual API providers' terms of service.
                 </p>
               </CardContent>
             </Card>
@@ -407,7 +407,7 @@ export default function ContactPage() {
                 <Users className="h-6 w-6 sm:h-8 sm:w-8 text-blue-600" />
               </div>
               <h3 className="font-semibold text-sm sm:text-base">10k+ Developers</h3>
-              <p className="text-xs sm:text-sm text-muted-foreground">Trust LearAPI for learning</p>
+              <p className="text-xs sm:text-sm text-muted-foreground">Trust LearnAPI for learning</p>
             </CardContent>
           </Card>
 

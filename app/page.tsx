@@ -12,6 +12,8 @@ import { useToast } from "@/hooks/use-toast";
 import Ads from "@/components/ads";
 import ProfitablerateAd from "@/components/profielareaad";
 import BannerAd from "@/components/bannerad";
+import Image from "next/image";
+import logo from "@/public/favicon.ico";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 60 },
@@ -58,7 +60,7 @@ export default function HomePage() {
               first: "Osib",
               last: "Developer",
             },
-            email: "osib@learapi.com",
+            email: "osib@learnapi.com",
             location: {
               ...data.results[0].location,
               city: "Karachi",
@@ -108,12 +110,11 @@ export default function HomePage() {
         className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60"
       >
         <div className="container mx-auto px-3 sm:px-4 flex h-14 sm:h-16 items-center justify-between">
-          <motion.div className="flex items-center space-x-2" whileHover={{ scale: 1.05 }}>
-            <div className="flex h-6 w-6 sm:h-8 sm:w-8 items-center justify-center rounded-lg bg-primary text-primary-foreground">
-              <Code className="h-3 w-3 sm:h-4 sm:w-4" />
-            </div>
-            <span className="text-lg sm:text-xl font-bold">LearAPI</span>
-          </motion.div>
+          <Link href="/">
+            <motion.div className="flex items-center space-x-2" whileHover={{ scale: 1.05 }}>
+              <Image src={logo} alt="logo" width={65} objectFit="contain" />
+            </motion.div>
+          </Link>
           <div className="flex items-center space-x-2 sm:space-x-4">
             <nav className="hidden md:flex items-center space-x-6">
               <Link href="/explore" className="text-sm font-medium hover:text-primary transition-colors">
@@ -218,7 +219,7 @@ export default function HomePage() {
           <div className="text-center mb-6 sm:mb-8 md:mb-12">
             <h2 className="mb-3 sm:mb-4 text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold">Try It Live!</h2>
             <p className="text-sm xs:text-base sm:text-lg text-muted-foreground max-w-3xl mx-auto px-2">
-              See LearAPI in action. Click the button below to make a real API call and see the response instantly.
+              See LearnAPI in action. Click the button below to make a real API call and see the response instantly.
             </p>
           </div>
 
@@ -365,7 +366,7 @@ export default function HomePage() {
       <section className="container mx-auto px-3 sm:px-4 py-8 sm:py-12 md:py-16 lg:py-24">
         <motion.div className="mx-auto max-w-6xl" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 0.8 }} viewport={{ once: true }}>
           <div className="text-center mb-6 sm:mb-8 md:mb-12">
-            <h2 className="mb-3 sm:mb-4 text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold">Why Choose LearAPI?</h2>
+            <h2 className="mb-3 sm:mb-4 text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold">Why Choose LearnAPI?</h2>
             <p className="text-sm xs:text-base sm:text-lg text-muted-foreground max-w-3xl mx-auto px-2">Everything you need to explore, test, and learn APIs in one place</p>
           </div>
 
@@ -445,7 +446,7 @@ export default function HomePage() {
               </motion.div>
               <CardTitle className="text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">Ready to Start Exploring?</CardTitle>
               <CardDescription className="text-sm xs:text-base sm:text-lg max-w-2xl mx-auto px-2">
-                Join thousands of developers who are already using LearAPI to master API integration. Start your journey today - it's completely free!
+                Join thousands of developers who are already using LearnAPI to master API integration. Start your journey today - it's completely free!
               </CardDescription>
             </CardHeader>
             <CardContent className="text-center">
@@ -494,12 +495,11 @@ export default function HomePage() {
         <div className="container mx-auto px-3 sm:px-4 py-6 sm:py-8 md:py-12">
           <div className="grid gap-4 sm:gap-6 md:gap-8 grid-cols-2 sm:grid-cols-4">
             <div className="col-span-2 sm:col-span-1 text-center sm:text-left">
-              <motion.div className="flex items-center space-x-2 justify-center sm:justify-start" whileHover={{ scale: 1.05 }}>
-                <div className="flex h-6 w-6 sm:h-8 sm:w-8 items-center justify-center rounded-lg bg-primary text-primary-foreground">
-                  <Code className="h-3 w-3 sm:h-4 sm:w-4" />
-                </div>
-                <span className="text-lg sm:text-xl font-bold">LearAPI</span>
-              </motion.div>
+              <Link href="/">
+                <motion.div className="flex items-center space-x-2" whileHover={{ scale: 1.05 }}>
+                  <Image src={logo} alt="logo" width={65} objectFit="contain" />
+                </motion.div>
+              </Link>
               <p className="mt-2 text-xs sm:text-sm text-muted-foreground">Interactive API playground for developers</p>
             </div>
             <div className="text-center sm:text-left">
@@ -550,7 +550,7 @@ export default function HomePage() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <p>&copy; 2025 LearAPI. Built with ❤️ for developers.</p>
+            <p>&copy; 2025 LearnAPI. Built with ❤️ for developers.</p>
             <motion.p className="mt-1 sm:mt-2 text-xs" whileHover={{ scale: 1.05 }}>
               Developed by <span className="font-semibold text-primary">Osib</span>
             </motion.p>

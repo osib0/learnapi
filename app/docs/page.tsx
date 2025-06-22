@@ -10,8 +10,8 @@ import Link from "next/link";
 import BannerAd from "@/components/bannerad";
 
 export const metadata = {
-  title: "Documentation - LearAPI | Complete API Learning Guide",
-  description: "Comprehensive documentation for LearAPI. Learn how to use our API explorer, understand endpoints, and get started with API testing.",
+  title: "Documentation - LearnAPI | Complete API Learning Guide",
+  description: "Comprehensive documentation for LearnAPI. Learn how to use our API explorer, understand endpoints, and get started with API testing.",
   keywords: "API documentation, API guide, REST API tutorial, API testing guide, developer documentation",
 };
 
@@ -30,7 +30,7 @@ export default function DocsPage() {
           </div>
           <h1 className="text-2xl xs:text-3xl sm:text-4xl font-bold mb-3 sm:mb-4">Documentation</h1>
           <p className="text-sm xs:text-base sm:text-xl text-muted-foreground mb-4 sm:mb-6 max-w-3xl mx-auto">
-            Everything you need to know about using LearAPI Explorer. From getting started to advanced features.
+            Everything you need to know about using LearnAPI Explorer. From getting started to advanced features.
           </p>
           <div className="flex flex-col xs:flex-row flex-wrap justify-center gap-3 sm:gap-4">
             <Button asChild size="sm" className="text-xs sm:text-sm">
@@ -70,7 +70,7 @@ export default function DocsPage() {
                   <Zap className="h-4 w-4 sm:h-5 sm:w-5" />
                   Quick Start
                 </CardTitle>
-                <CardDescription className="text-xs sm:text-sm">Get up and running with LearAPI Explorer in minutes</CardDescription>
+                <CardDescription className="text-xs sm:text-sm">Get up and running with LearnAPI Explorer in minutes</CardDescription>
               </CardHeader>
               <CardContent className="space-y-4 sm:space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
@@ -149,7 +149,7 @@ export default function DocsPage() {
             <Card>
               <CardHeader>
                 <CardTitle className="text-lg sm:text-xl">Features Overview</CardTitle>
-                <CardDescription className="text-xs sm:text-sm">Discover all the powerful features available in LearAPI Explorer</CardDescription>
+                <CardDescription className="text-xs sm:text-sm">Discover all the powerful features available in LearnAPI Explorer</CardDescription>
               </CardHeader>
               <CardContent>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">

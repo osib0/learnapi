@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { Github, Code } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
+import logo from "@/public/favicon.ico";
 
 export function Footer() {
   return (
@@ -8,12 +10,9 @@ export function Footer() {
       <div className="container mx-auto px-3 sm:px-4 py-8 sm:py-12">
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 sm:gap-8">
           <div className="col-span-2 sm:col-span-1 space-y-4">
-            <div className="flex items-center space-x-2">
-              <div className="h-6 w-6 sm:h-8 sm:w-8 bg-primary rounded-lg flex items-center justify-center">
-                <Code className="h-3 w-3 sm:h-4 sm:w-4 text-primary-foreground" />
-              </div>
-              <span className="font-bold text-lg sm:text-xl">LearAPI</span>
-            </div>
+            <Link href="/" className="flex items-center space-x-2">
+              <Image src={logo} alt="logo" width={65} objectFit="contain" />
+            </Link>
             <p className="text-xs sm:text-sm text-muted-foreground">Professional API learning platform for developers worldwide.</p>
           </div>
 
@@ -63,7 +62,7 @@ export function Footer() {
         </div>
 
         <div className="border-t mt-6 sm:mt-8 pt-6 sm:pt-8 text-center text-xs sm:text-sm text-muted-foreground">
-          <p>&copy; 2025 LearAPI. All rights reserved.</p>
+          <p>&copy; 2025 LearnAPI. All rights reserved.</p>
           <p className="mt-1 sm:mt-2 text-xs">
             Developed by <span className="font-semibold text-primary">Osib</span>
           </p>

@@ -2,10 +2,12 @@
 
 import { Button } from "@/components/ui/button";
 import { ModeToggle } from "@/components/mode-toggle";
-import { Github, Menu, Code } from "lucide-react";
+import { Github, Menu } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import logo from "@/public/favicon.ico";
+import Image from "next/image";
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,10 +16,7 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto px-3 sm:px-4 h-14 sm:h-16 flex items-center justify-between">
         <Link href="/" className="flex items-center space-x-2">
-          <div className="h-6 w-6 sm:h-8 sm:w-8 bg-primary rounded-lg flex items-center justify-center">
-            <Code className="h-3 w-3 sm:h-4 sm:w-4 text-primary-foreground" />
-          </div>
-          <span className="font-bold text-lg sm:text-xl">LearAPI</span>
+          <Image src={logo} alt="logo" width={65} objectFit="contain" />
         </Link>
 
         {/* Desktop Navigation */}

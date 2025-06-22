@@ -16,7 +16,7 @@ const nextConfig = {
   },
   // Force static generation for all pages
   generateBuildId: async () => {
-    return 'learapi-build'
+    return 'learnapi-build'
   },
 }
 

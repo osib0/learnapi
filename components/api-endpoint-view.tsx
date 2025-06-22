@@ -66,7 +66,7 @@ export function ApiEndpointView({ endpoint }: ApiEndpointViewProps) {
                   first: "Osib",
                   last: "Developer",
                 },
-                email: "osib@learapi.com",
+                email: "osib@learnapi.com",
                 location: {
                   ...customResponse.results[0].location,
                   city: "Karachi",

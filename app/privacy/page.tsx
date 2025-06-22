@@ -7,8 +7,8 @@ import { Footer } from "@/components/footer";
 import Ads from "@/components/ads";
 
 export const metadata = {
-  title: "Privacy Policy - LearAPI",
-  description: "Learn how LearAPI protects your privacy and handles your data with transparency and security.",
+  title: "Privacy Policy - LearnAPI",
+  description: "Learn how LearnAPI protects your privacy and handles your data with transparency and security.",
 };
 
 export default function PrivacyPage() {
@@ -123,7 +123,7 @@ export default function PrivacyPage() {
                   <Badge variant="outline" className="mt-1 text-xs">
                     Service
                   </Badge>
-                  <p className="text-xs sm:text-sm">Provide and maintain the LearAPI platform functionality</p>
+                  <p className="text-xs sm:text-sm">Provide and maintain the LearnAPI platform functionality</p>
                 </div>
                 <div className="flex items-start gap-2 sm:gap-3">
                   <Badge variant="outline" className="mt-1 text-xs">
@@ -160,7 +160,7 @@ export default function PrivacyPage() {
             <CardContent className="space-y-3 sm:space-y-4">
               <div className="p-3 sm:p-4 bg-green-50 border border-green-200 rounded-lg">
                 <h4 className="font-semibold text-green-800 mb-2 text-sm sm:text-base">We do not sell your personal information</h4>
-                <p className="text-xs sm:text-sm text-green-700">LearAPI never sells, rents, or trades your personal information to third parties for marketing purposes.</p>
+                <p className="text-xs sm:text-sm text-green-700">LearnAPI never sells, rents, or trades your personal information to third parties for marketing purposes.</p>
               </div>
 
               <div>
@@ -256,8 +256,8 @@ export default function PrivacyPage() {
               <div className="mt-4 sm:mt-6 p-3 sm:p-4 bg-blue-50 border border-blue-200 rounded-lg">
                 <p className="text-xs sm:text-sm text-blue-800">
                   <strong>To exercise these rights,</strong> please contact us at{" "}
-                  <a href="mailto:privacy@learapi.com" className="underline">
-                    privacy@learapi.com
+                  <a href="mailto:privacy@learnapi.com" className="underline">
+                    privacy@learnapi.com
                   </a>
                 </p>
               </div>
@@ -276,8 +276,8 @@ export default function PrivacyPage() {
                   <h4 className="font-semibold mb-2 text-sm sm:text-base">General Inquiries</h4>
                   <p className="text-xs sm:text-sm text-muted-foreground">
                     Email:{" "}
-                    <a href="mailto:privacy@learapi.com" className="text-primary hover:underline">
-                      privacy@learapi.com
+                    <a href="mailto:privacy@learnapi.com" className="text-primary hover:underline">
+                      privacy@learnapi.com
                     </a>
                   </p>
                 </div>
@@ -285,8 +285,8 @@ export default function PrivacyPage() {
                   <h4 className="font-semibold mb-2 text-sm sm:text-base">Data Protection Officer</h4>
                   <p className="text-xs sm:text-sm text-muted-foreground">
                     Email:{" "}
-                    <a href="mailto:dpo@learapi.com" className="text-primary hover:underline">
-                      dpo@learapi.com
+                    <a href="mailto:dpo@learnapi.com" className="text-primary hover:underline">
+                      dpo@learnapi.com
                     </a>
                   </p>
                 </div>

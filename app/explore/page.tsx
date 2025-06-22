@@ -8,7 +8,7 @@ import Ads from "@/components/ads";
 import ProfitablerateAd from "@/components/profielareaad";
 
 export const metadata = {
-  title: "API Explorer - LearAPI | Test and Learn APIs Interactively",
+  title: "API Explorer - LearnAPI | Test and Learn APIs Interactively",
   description: "Explore, test, and learn from real APIs with our interactive playground. Get code examples, view responses, and understand API endpoints easily.",
   keywords: "API explorer, API testing, REST API, API documentation, developer tools, API playground",
 };
@@ -130,7 +130,7 @@ export default function ExplorePage() {
               <Star className="h-4 w-4 sm:h-5 sm:w-5 text-primary" />
               Getting Started Guide
             </CardTitle>
-            <CardDescription className="text-xs sm:text-sm">Follow these simple steps to make the most of LearAPI Explorer</CardDescription>
+            <CardDescription className="text-xs sm:text-sm">Follow these simple steps to make the most of LearnAPI Explorer</CardDescription>
           </CardHeader>
           <CardContent>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
@@ -212,7 +212,7 @@ export default function ExplorePage() {
         {/* Features */}
         <Card>
           <CardHeader>
-            <CardTitle className="text-lg sm:text-xl">Why Choose LearAPI Explorer?</CardTitle>
+            <CardTitle className="text-lg sm:text-xl">Why Choose LearnAPI Explorer?</CardTitle>
             <CardDescription className="text-xs sm:text-sm">Everything you need to learn and test APIs effectively</CardDescription>
           </CardHeader>
           <CardContent>
