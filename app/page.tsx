@@ -1,15 +1,14 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ArrowRight, Code, Zap, Shield, Palette, Globe, Github, BookOpen, Play, Star, Users, Clock, CheckCircle, Copy } from "lucide-react";
 import { ThemeToggle } from "@/components/theme-toggle";
-import { motion } from "framer-motion";
+import { animate, motion } from "framer-motion";
 import { useToast } from "@/hooks/use-toast";
-import Ads from "@/components/ads";
 import ProfitablerateAd from "@/components/profielareaad";
 import BannerAd from "@/components/bannerad";
 import Image from "next/image";
@@ -32,6 +31,27 @@ const staggerContainer = {
 const scaleOnHover = {
   whileHover: { scale: 1.05 },
   whileTap: { scale: 0.95 },
+};
+
+const fadeCount = {
+  initial: { opacity: 0, y: 20 },
+  animate: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+};
+
+const Counter = ({ from = 0, to, duration = 1 }: { from?: number; to: number; duration?: number }) => {
+  const [value, setValue] = useState(from);
+
+  useEffect(() => {
+    const controls = animate(from, to, {
+      duration,
+      onUpdate(latest) {
+        setValue(Math.floor(latest));
+      },
+    });
+    return () => controls.stop();
+  }, [from, to, duration]);
+
+  return <span>{value}</span>;
 };
 
 export default function HomePage() {
@@ -189,25 +209,37 @@ export default function HomePage() {
               </Button>
             </motion.div>
           </motion.div>
+        </motion.div>
 
-          {/* Stats */}
-          <motion.div variants={fadeInUp} className="mt-8 sm:mt-12 md:mt-16 grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 md:gap-8">
-            <motion.div className="text-center" whileHover={{ scale: 1.05 }}>
-              <div className="text-xl xs:text-2xl sm:text-3xl font-bold text-primary">10+</div>
-              <div className="text-xs sm:text-sm text-muted-foreground">API Endpoints</div>
-            </motion.div>
-            <motion.div className="text-center" whileHover={{ scale: 1.05 }}>
-              <div className="text-xl xs:text-2xl sm:text-3xl font-bold text-primary">5</div>
-              <div className="text-xs sm:text-sm text-muted-foreground">Languages</div>
-            </motion.div>
-            <motion.div className="text-center" whileHover={{ scale: 1.05 }}>
-              <div className="text-xl xs:text-2xl sm:text-3xl font-bold text-primary">100%</div>
-              <div className="text-xs sm:text-sm text-muted-foreground">Free</div>
-            </motion.div>
-            <motion.div className="text-center" whileHover={{ scale: 1.05 }}>
-              <div className="text-xl xs:text-2xl sm:text-3xl font-bold text-primary">24/7</div>
-              <div className="text-xs sm:text-sm text-muted-foreground">Available</div>
-            </motion.div>
+        {/* Stats */}
+        <motion.div variants={fadeCount} initial="initial" animate="animate" className="mt-8 sm:mt-12 md:mt-16 grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 md:gap-8">
+          <motion.div className="text-center" whileHover={{ scale: 1.05 }}>
+            <div className="text-xl xs:text-2xl sm:text-3xl font-bold text-primary">
+              <Counter to={10} />+
+            </div>
+            <div className="text-xs sm:text-sm text-muted-foreground">API Endpoints</div>
+          </motion.div>
+
+          <motion.div className="text-center" whileHover={{ scale: 1.05 }}>
+            <div className="text-xl xs:text-2xl sm:text-3xl font-bold text-primary">
+              <Counter to={5} />
+            </div>
+            <div className="text-xs sm:text-sm text-muted-foreground">Languages</div>
+          </motion.div>
+
+          <motion.div className="text-center" whileHover={{ scale: 1.05 }}>
+            <div className="text-xl xs:text-2xl sm:text-3xl font-bold text-primary">
+              <Counter to={100} />%
+            </div>
+            <div className="text-xs sm:text-sm text-muted-foreground">Free</div>
+          </motion.div>
+
+          <motion.div className="text-center" whileHover={{ scale: 1.05 }}>
+            <div className="text-xl xs:text-2xl sm:text-3xl font-bold text-primary">
+              <Counter to={24} />
+              /7
+            </div>
+            <div className="text-xs sm:text-sm text-muted-foreground">Available</div>
           </motion.div>
         </motion.div>
       </section>
