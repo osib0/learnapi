@@ -12,7 +12,9 @@ import { ThemeToggle } from "@/components/theme-toggle";
 import { apiCategories } from "@/lib/api-data";
 import { Suspense } from "react";
 import Image from "next/image";
-import logo from "@/public/favicon.ico";
+import logo from "@/public/logo-light.png";
+import logodark from "@/public/logo-dark.png";
+import { useTheme } from "next-themes";
 
 function SidebarContent() {
   const [searchQuery, setSearchQuery] = React.useState("");
@@ -97,6 +99,7 @@ function SidebarContent() {
 
 export default function ExploreLayout({ children }: { children: React.ReactNode }) {
   const [sidebarOpen, setSidebarOpen] = React.useState(false);
+  const { theme } = useTheme();
 
   return (
     <div className="min-h-screen bg-background">
@@ -125,7 +128,7 @@ export default function ExploreLayout({ children }: { children: React.ReactNode 
               </Link>
             </Button>
             <Link href="/" className="flex items-center space-x-2">
-              <Image src={logo} alt="logo" width={65} objectFit="contain" />
+              {theme?.includes("light") ? <Image src={logo} alt="logo" /> : <Image src={logodark} alt="logo" />}
             </Link>
           </div>
           <ThemeToggle />

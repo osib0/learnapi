@@ -6,17 +6,20 @@ import { Github, Menu } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import logo from "@/public/favicon.ico";
+import logo from "@/public/logo-light.png";
+import logodark from "@/public/logo-dark.png";
 import Image from "next/image";
+import { useTheme } from "next-themes";
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const { theme } = useTheme();
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto px-3 sm:px-4 h-14 sm:h-16 flex items-center justify-between">
         <Link href="/" className="flex items-center space-x-2">
-          <Image src={logo} alt="logo" width={65} objectFit="contain" />
+          {theme?.includes("light") ? <Image src={logo} alt="logo" /> : <Image src={logodark} alt="logo" />}
         </Link>
 
         {/* Desktop Navigation */}

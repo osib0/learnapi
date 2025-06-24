@@ -1,5 +1,5 @@
-import { Users, MessageSquare, Package, Smile } from "lucide-react"
-import type { ApiCategory, ApiEndpoint } from "./types"
+import { Users, MessageSquare, Package, Smile } from "lucide-react";
+import type { ApiCategory, ApiEndpoint } from "./types";
 
 export const apiCategories: ApiCategory[] = [
   {
@@ -226,15 +226,15 @@ export const apiCategories: ApiCategory[] = [
       },
     ],
   },
-]
+];
 
 export function getApiEndpoint(categoryId: string, endpointId: string): ApiEndpoint | null {
-  const category = apiCategories.find((cat) => cat.id === categoryId)
-  if (!category) return null
+  const category = apiCategories.find((cat) => cat.id === categoryId);
+  if (!category) return null;
 
-  return category.endpoints.find((endpoint) => endpoint.id === endpointId) || null
+  return category.endpoints.find((endpoint) => endpoint.id === endpointId) || null;
 }
 
 export function getAllEndpoints(): ApiEndpoint[] {
-  return apiCategories.flatMap((category) => category.endpoints)
+  return apiCategories.flatMap((category) => category.endpoints);
 }

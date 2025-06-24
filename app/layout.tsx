@@ -17,14 +17,21 @@ export const metadata: Metadata = {
     title: "LearnAPI - Explore & Learn Real APIs Instantly",
     description: "Interactive API playground with real-time response, code snippets & more.",
     type: "website",
+    url: "https://learnapi.springlab.in/",
+    images: [
+      {
+        url: "http://localhost:3000/_next/static/media/logo-dark.1bd389eb.png",
+        width: 1200,
+        height: 630,
+        alt: "LearnAPI Preview",
+      },
+    ],
   },
   icons: {
     icon: "/favicon.ico",
     shortcut: "/favicon.ico",
     apple: "/favicon.ico",
   },
-
-  generator: "v0.dev",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

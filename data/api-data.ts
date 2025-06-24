@@ -1,4 +1,4 @@
-import type { APICategory } from "@/types/api"
+import type { APICategory } from "@/types/api";
 
 export const apiCategories: APICategory[] = [
   {
@@ -9,8 +9,7 @@ export const apiCategories: APICategory[] = [
       {
         id: "random-user",
         title: "Get Random User",
-        description:
-          "Fetch a random user with complete profile information including name, email, avatar, and address.",
+        description: "Fetch a random user with complete profile information including name, email, avatar, and address.",
         method: "GET",
         url: "https://api.freeapi.app/api/v1/public/randomusers/user/random",
         category: "users",
@@ -133,4 +132,4 @@ export const apiCategories: APICategory[] = [
       },
     ],
   },
-]
+];
