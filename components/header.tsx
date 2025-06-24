@@ -19,7 +19,7 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto px-3 sm:px-4 h-14 sm:h-16 flex items-center justify-between">
         <Link href="/" className="flex items-center space-x-2">
-          {theme?.includes("light") ? <Image src={logo} alt="logo" /> : <Image src={logodark} alt="logo" />}
+          {!theme?.includes("light") ? <Image src={logodark} alt="logo" /> : <Image src={logo} alt="logo" />}
         </Link>
 
         {/* Desktop Navigation */}

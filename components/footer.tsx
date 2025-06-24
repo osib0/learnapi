@@ -15,7 +15,7 @@ export function Footer() {
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 sm:gap-8">
           <div className="col-span-2 sm:col-span-1 space-y-4">
             <Link href="/" className="flex items-center space-x-2">
-              {theme?.includes("light") ? <Image src={logo} alt="logo" /> : <Image src={logodark} alt="logo" />}
+              {!theme?.includes("light") ? <Image src={logodark} alt="logo" /> : <Image src={logo} alt="logo" />}
             </Link>
             <p className="text-xs sm:text-sm text-muted-foreground">Professional API learning platform for developers worldwide.</p>
           </div>

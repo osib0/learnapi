@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     url: "https://learnapi.springlab.in/",
     images: [
       {
-        url: "http://localhost:3000/_next/static/media/logo-dark.1bd389eb.png",
+        url: "https://learnapi.springlab.in/_next/static/media/logo-light.1c1ef901.png",
         width: 1200,
         height: 630,
         alt: "LearnAPI Preview",
