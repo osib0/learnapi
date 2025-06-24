@@ -135,7 +135,7 @@ export default function HomePage() {
         <div className="container mx-auto px-3 sm:px-4 flex h-14 sm:h-16 items-center justify-between">
           <Link href="/">
             <motion.div className="flex items-center space-x-2" whileHover={{ scale: 1.05 }}>
-              <Image src={theme === "light" ? logo : logodark} alt="logo" />
+              <Image src={theme === "dark" ? logodark : logo} alt="logo" />
             </motion.div>
           </Link>
           <div className="flex items-center space-x-2 sm:space-x-4">
@@ -532,7 +532,7 @@ export default function HomePage() {
             <div className="col-span-2 sm:col-span-1 text-center sm:text-left">
               <Link href="/">
                 <motion.div className="flex items-center space-x-2" whileHover={{ scale: 1.05 }}>
-                  <Image src={theme === "light" ? logo : logodark} alt="logo" />
+                  <Image src={theme === "dark" ? logodark : logo} alt="logo" />
                 </motion.div>
               </Link>
               <p className="mt-2 text-xs sm:text-sm text-muted-foreground">Interactive API playground for developers</p>

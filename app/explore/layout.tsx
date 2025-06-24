@@ -128,7 +128,7 @@ export default function ExploreLayout({ children }: { children: React.ReactNode 
               </Link>
             </Button>
             <Link href="/" className="flex items-center space-x-2">
-              <Image src={theme === "light" ? logo : logodark} alt="logo" />
+              <Image src={theme === "dark" ? logodark : logo} alt="logo" />
             </Link>
           </div>
           <ThemeToggle />
