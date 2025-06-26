@@ -5,7 +5,6 @@ import { Code, Zap, BookOpen, Package, ArrowRight, Star, Clock, Shield } from "l
 import Link from "next/link";
 import { apiCategories } from "@/lib/api-data";
 import Ads from "@/components/ads";
-import ProfitablerateAd from "@/components/profielareaad";
 
 export const metadata = {
   title: "API Explorer - LearnAPI | Test and Learn APIs Interactively",
@@ -177,7 +176,6 @@ export default function ExplorePage() {
             </div>
           </CardContent>
         </Card>
-        <ProfitablerateAd />
         {/* Popular Endpoints */}
         <div className="mb-6 sm:mb-8">
           <h2 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6">Popular Endpoints</h2>
@@ -208,7 +206,6 @@ export default function ExplorePage() {
             ))}
           </div>
         </div>
-
         {/* Features */}
         <Card>
           <CardHeader>

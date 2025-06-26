@@ -9,7 +9,6 @@ import { ArrowRight, Code, Zap, Shield, Palette, Globe, Github, BookOpen, Play, 
 import { ThemeToggle } from "@/components/theme-toggle";
 import { animate, motion } from "framer-motion";
 import { useToast } from "@/hooks/use-toast";
-import ProfitablerateAd from "@/components/profielareaad";
 import BannerAd from "@/components/bannerad";
 import Image from "next/image";
 import logo from "@/public/logo-light.png";
@@ -395,8 +394,6 @@ export default function HomePage() {
           </motion.div>
         </motion.div>
       </section>
-
-      <ProfitablerateAd />
       {/* Features Section */}
       <section className="container mx-auto px-3 sm:px-4 py-8 sm:py-12 md:py-16 lg:py-24">
         <motion.div className="mx-auto max-w-6xl" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 0.8 }} viewport={{ once: true }}>

@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+
+Disallow: /admin/
+Disallow: /api/
+
+
+Sitemap: https://learnapi.springlab.in/sitemap.xml
+
+
+
+
