@@ -27,8 +27,6 @@ Live Site 👉 [learnapi.springlab.in](https://learnapi.springlab.in)
 - [Next.js](https://nextjs.org/)
 - [TypeScript](https://www.typescriptlang.org/)
 - [TailwindCSS](https://tailwindcss.com/)
-- [Zod](https://zod.dev/) – schema validation
-- [next-sitemap](https://github.com/iamvishnusankar/next-sitemap)
 - [Shadcn/UI](https://ui.shadcn.com/)
 - [React Hook Form](https://react-hook-form.com/)
 
