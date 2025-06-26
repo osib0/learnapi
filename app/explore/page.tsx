@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Code, Zap, BookOpen, Package, ArrowRight, Star, Clock, Shield } from "lucide-react";
 import Link from "next/link";
 import { apiCategories } from "@/lib/api-data";
-import Ads from "@/components/ads";
+import ProfitablerateAd from "@/components/profielareaad";
 
 export const metadata = {
   title: "API Explorer - LearnAPI | Test and Learn APIs Interactively",
@@ -47,7 +47,6 @@ export default function ExplorePage() {
             </div>
           </div>
         </div>
-        <Ads />
         {/* Quick Start Cards */}
         <div className="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 lg:gap-6 mb-6 sm:mb-8 lg:mb-12">
           <Card className="hover:shadow-lg transition-shadow">
@@ -176,6 +175,7 @@ export default function ExplorePage() {
             </div>
           </CardContent>
         </Card>
+        <ProfitablerateAd />
         {/* Popular Endpoints */}
         <div className="mb-6 sm:mb-8">
           <h2 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6">Popular Endpoints</h2>
@@ -206,6 +206,7 @@ export default function ExplorePage() {
             ))}
           </div>
         </div>
+
         {/* Features */}
         <Card>
           <CardHeader>
